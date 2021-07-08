@@ -13,11 +13,11 @@ export const Menu = (props: MenuProperties) => {
             <span>Discord Bot Dashboard</span>
         </MenuHeader>
         <MenuContent>
-            {menuItems('123').map((item) => (
+            {menuItems('channel').map((item) => (
                 <MenuCategory key = {item.name}>
                     <span>{item.name}</span>
                     {item.routes.map((route) => (
-                       <MenuCategoryItem key={route.name}>
+                       <MenuCategoryItem key={route.name} onClick={() => props.history.push(route.path)}>
                             <span># {route.name}</span>
                        </MenuCategoryItem> 
                     ))}

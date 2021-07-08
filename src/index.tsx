@@ -8,7 +8,7 @@ import { ThemeProvider } from 'styled-components';
 import { DarkTheme } from './utils/themes';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <React.StrictMode>  
     <Router>
       <ThemeProvider theme={DarkTheme}>
         <App />
